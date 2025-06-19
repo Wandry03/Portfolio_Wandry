@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wandry Nunes Ferreira | Desenvolvedor Web</title>
+
+  <!-- Fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary-color: #00bcd4;
+      --hover-color: #4caf50;
+      --bg-color: #0f0f0f;
+      --text-color: #f4f4f4;
+      --card-bg: rgba(31, 31, 31, 0.65);
+    }
+
+    body.light {
+      --primary-color: #00796b;
+      --hover-color: #388e3c;
+      --bg-color: #ffffff;
+      --text-color: #111111;
+      --card-bg: rgba(255, 255, 255, 0.85);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+        url('img/fundo_do_site.avif') no-repeat center center/cover;
+      background-attachment: fixed;
+      color: var(--text-color);
+      line-height: 1.6;
+      position: relative;
+      min-height: 100vh;
+      padding-bottom: 100px;
+    }
+
+    header {
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      transition: filter 0.5s ease-in-out;
+      opacity: 0;
+      position: relative;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("img/fundo.avif") no-repeat center center/cover;
+    }
+
+    header:hover {
+      filter: brightness(1.1);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    #toggle-theme {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 1.6rem;
+      cursor: pointer;
+      color: white;
+      transition: transform 0.2s;
+    }
+
+    #toggle-theme:hover {
+      transform: scale(1.2);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    section {
+      background-color: var(--card-bg);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+      backdrop-filter: blur(6px);
+    }
+
+    section:hover {
+      transform: scale(1.02);
+    }
+
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    ul li {
+      margin-left: 20px;
+      margin-bottom: 5px;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons a,
+    .buttons button {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      margin-right: 10px;
+      transition: background 0.3s, transform 0.3s;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .buttons a:hover,
+    .buttons button:hover {
+      background-color: var(--hover-color);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: var(--card-bg);
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 15px;
+      }
+
+      .buttons a,
+      .buttons button {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+      }
+
+      #toggle-theme {
+        top: 15px;
+        right: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Wandry Nunes Ferreira</h1>
+    <p>Desenvolvedor Web | Técnico em Informática para Internet</p>
+    <button id="toggle-theme" title="Alternar tema">🌙</button>
+  </header>
+
+  <main>
+    <section>
+      <h2>Sobre Mim</h2>
+      <p>Tenho 19 anos, sou de Montes Claros - MG. Sou proativo, criativo e apaixonado por tecnologia. Me formei no curso Técnico em Informática para Internet pelo Instituto Federal de Minas Gerais (IFMG), onde adquiri conhecimentos sólidos em desenvolvimento web e banco de dados.</p>
+    </section>
+
+    <section>
+      <h2>Habilidades</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript, PHP</li>
+        <li>SQL (banco de dados)</li>
+        <li>Excel Intermediário</li>
+        <li>Inglês Intermediário</li>
+        <li>Trabalho em equipe, comunicação, proatividade</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Redes Sociais</h2>
+      <div class="buttons">
+        <a href="https://www.linkedin.com/in/wandry-nunes" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Wandry03" target="_blank">GitHub</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contato</h2>
+      <div class="buttons">
+        <a id="btn-email" href="#">Enviar Email</a>
+        <a href="https://wa.me/5538998070033?text=Olá,%20estava%20observando%20seu%20site,%20podemos%20conversar?" target="_blank">WhatsApp</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Currículo 📄</h2>
+      <p>Confira meu currículo completo com todas as minhas experiências e formações detalhadas.</p>
+      <div class="buttons">
+        <a href="Wandry_Curriculo.pdf" download>📥 Baixar meu currículo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Wandry Nunes Ferreira. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Header fade-in
+      const header = document.querySelector("header");
+      setTimeout(() => {
+        header.style.transition = "opacity 1s ease-in-out";
+        header.style.opacity = 1;
+      }, 100);
+
+      // Email button
+      const btnEmail = document.getElementById('btn-email');
+      btnEmail.addEventListener('click', () => {
+        window.location.href = "mailto:nuneswandry59@gmail.com?subject=Contato%20do%20site&body=Olá,%20estava%20observando%20seu%20site,%20podemos%20conversar?";
+      });
+
+      // Tema claro/escuro
+      const toggleBtn = document.getElementById('toggle-theme');
+      const body = document.body;
+
+      function toggleTheme() {
+        body.classList.toggle('light');
+        const isLight = body.classList.contains('light');
+        toggleBtn.textContent = isLight ? '☀️' : '🌙';
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      }
+
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        body.classList.add('light');
+        toggleBtn.textContent = '☀️';
+      }
+
+      toggleBtn.addEventListener('click', toggleTheme);
+    });
+  </script>
+</body>
+</html>
